@@ -1,0 +1,54 @@
+.allFolders {
+  flex-wrap: wrap;
+  z-index: 1;
+  display: flex;
+  gap: 4rem;
+  @media only screen and (min-width: 600px) {
+    width: 65%;
+  }
+  @media only screen and (min-width: 1600px) {
+    width: 40%;
+  }
+  .productContainer {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    .categorySubHeader {
+      font-size: 0.8rem;
+      @media only screen and (min-width: 900px) {
+        font-size: 1.5rem;
+      }
+    }
+    .folderIcon {
+      -webkit-user-drag: none;
+      display: flex;
+      width: 100px;
+      height: 100px;
+      @media only screen and (min-width: 900px) {
+        width: 200px;
+        height: 200px;
+      }
+    }
+    .loginIcon {
+      -webkit-user-drag: none;
+      display: flex;
+      @media only screen and (min-width: 900px) {
+        width: 200px;
+        height: 200px;
+      }
+    }
+    .logoutIcon {
+      -webkit-user-drag: none;
+      display: flex;
+      width: 150px;
+      height: 150px;
+      @media only screen and (min-width: 900px) {
+        width: 200px;
+        height: 200px;
+      }
+    }
+  }
+}

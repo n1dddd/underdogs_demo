@@ -1,0 +1,41 @@
+.authCard {
+  width: 350px;
+  height: 600px;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: hsla(0, 0%, 100%, 0.4);
+  .authCardHeader {
+    margin-top: 2rem;
+  }
+  .authForm {
+    margin-top: 2rem;
+    gap: 3rem;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    .emailPassInput {
+      display: flex;
+      gap: 2rem;
+      flex-direction: column;
+      .inputField {
+        height: 3rem;
+        border-radius: 2rem;
+      }
+    }
+    .authButton {
+      height: 3rem;
+      border-radius: 2rem;
+      font-weight: 700;
+    }
+  }
+  .authRoute {
+    margin-top: 3rem;
+    .linkUnderline {
+      text-decoration: underline;
+    }
+  }
+}
