@@ -54,7 +54,7 @@ const FolderIcon = () => {
             <>
                 <Draggable >
                     <div key={index} className={styles.productContainer} onDoubleClick={() => setFinderSetCategory(category)} onTouchStart={() => setFinderSetCategory(category)}>
-                        <img src={closedFolder} className={styles.folderIcon} />
+                        <img src={closedFolder} draggable={false} className={styles.folderIcon} />
                         <h2 className={styles.categorySubHeader} key={index}>{category}</h2>
                     </div>
                 </Draggable >
@@ -67,12 +67,12 @@ const FolderIcon = () => {
         <>
             <div className={styles.allFolders}>
                 {productCategories}
-                {!authUser && <Draggable><div onClick={() => navigate("login")} className={styles.productContainer}>
-                    <img src={logInIcon} className={styles.loginIcon} />
+                {!authUser && <Draggable><div onDoubleClick={() => navigate("login")} className={styles.productContainer}>
+                    <img src={logInIcon} draggable={false} className={styles.loginIcon} />
                     <h2 className={styles.categorySubHeader}>Login?</h2>
                 </div></Draggable>}
-                {authUser && <Draggable><div onClick={handleLogout} className={styles.productContainer}>
-                    <img src={logoutIcon} className={styles.logoutIcon} />
+                {authUser && <Draggable><div onDoubleClick={handleLogout} className={styles.productContainer}>
+                    <img src={logoutIcon} draggable={false} className={styles.logoutIcon} />
                     <h2 className={styles.categorySubHeader}>Logout</h2>
                 </div></Draggable>}
             </div >
