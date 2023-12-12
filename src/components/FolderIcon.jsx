@@ -52,8 +52,8 @@ const FolderIcon = () => {
     const productCategories = statefulCategories.map((category, index) => {
         return (
             <>
-                <Draggable>
-                    <div className={styles.productContainer} onDoubleClick={() => setFinderSetCategory(category)} onTouchStart={() => setFinderSetCategory(category)}>
+                <Draggable >
+                    <div key={index} className={styles.productContainer} onDoubleClick={() => setFinderSetCategory(category)} onTouchStart={() => setFinderSetCategory(category)}>
                         <img src={closedFolder} className={styles.folderIcon} />
                         <h2 className={styles.categorySubHeader} key={index}>{category}</h2>
                     </div>
@@ -67,7 +67,6 @@ const FolderIcon = () => {
         <>
             <div className={styles.allFolders}>
                 {productCategories}
-
                 {!authUser && <Draggable><div onClick={() => navigate("login")} className={styles.productContainer}>
                     <img src={logInIcon} className={styles.loginIcon} />
                     <h2 className={styles.categorySubHeader}>Login?</h2>
@@ -76,7 +75,6 @@ const FolderIcon = () => {
                     <img src={logoutIcon} className={styles.logoutIcon} />
                     <h2 className={styles.categorySubHeader}>Logout</h2>
                 </div></Draggable>}
-
             </div >
             {finder && <FinderComponent />}
         </>
