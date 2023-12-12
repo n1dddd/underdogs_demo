@@ -33,6 +33,7 @@ const ProductComponent = () => {
     const products = useProductsStore((state) => state.products);
     const setFilteredProducts = useProductsStore((state) => state.setFilteredProducts);
     useEffect(() => {
+        getProductInformation();
         const getFilteredProducts = () => {
             if (activeCategory !== "all") {
                 let filteredProducts = products.filter((product) => {
@@ -44,9 +45,8 @@ const ProductComponent = () => {
                 setFilteredProducts(products);
             }
         }
-        getProductInformation();
         getFilteredProducts();
-    }, [activeCategory])
+    }, [activeCategory, products])
 
     const handleProductRedirect = (product) => {
         navigate("/products/" + product.id)
