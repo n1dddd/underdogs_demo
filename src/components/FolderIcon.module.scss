@@ -1,13 +1,13 @@
 .allFolders {
+  display: flex;
   flex-wrap: wrap;
   z-index: 1;
-  display: flex;
-  gap: 4rem;
+  gap: 2rem;
   @media only screen and (min-width: 600px) {
-    width: 65%;
+    width: 100%;
   }
   @media only screen and (min-width: 1600px) {
-    width: 40%;
+    width: 50%;
   }
   .productContainer {
     display: flex;
@@ -15,6 +15,7 @@
     flex-direction: column;
     text-align: center;
     gap: 0.5rem;
+    align-items: center;
     cursor: pointer;
     .categorySubHeader {
       font-size: 0.8rem;
@@ -25,8 +26,9 @@
     .folderIcon {
       -webkit-user-drag: none;
       display: flex;
-      width: 100px;
-      height: 100px;
+
+      width: 50px;
+      height: 50px;
       @media only screen and (min-width: 900px) {
         width: 200px;
         height: 200px;
@@ -43,8 +45,8 @@
     .logoutIcon {
       -webkit-user-drag: none;
       display: flex;
-      width: 150px;
-      height: 150px;
+      width: 100px;
+      height: 100px;
       @media only screen and (min-width: 900px) {
         width: 200px;
         height: 200px;
